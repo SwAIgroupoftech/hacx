@@ -1,6 +1,6 @@
 # TrafficSense
 
-> An AI-powered traffic intelligence system. Local analysis code turns road-network data into compact statistical evidence, and an LLM uses that evidence to forecast traffic 15-60 minutes ahead, classify incidents, and write evidence-based advisories and network-improvement proposals.
+> An LLM-powered traffic intelligence system. Local analysis code turns road-network data into compact statistical evidence, and an LLM uses that evidence to forecast traffic 15-60 minutes ahead, classify incidents, and write evidence-based advisories and network-improvement proposals.
 
 **All outputs are advisory and simulated.** TrafficSense does not control signals, access cameras, GPS devices, roadside sensors, or municipal infrastructure, and it does not trigger any real-world action.
 
@@ -105,7 +105,7 @@ Because LLM output can be inconsistent, every response passes through checks bef
 | Language | Python 3.14+ |
 | Data analysis | pandas, numpy, scipy |
 | Graph / routing | networkx |
-| LLM | External LLM API, JSON in / JSON out |
+| LLM | External LLM API (Anthropic by default, configurable via `.env`), JSON in / JSON out |
 | Backend | FastAPI |
 | Dashboard | Streamlit + Plotly |
 | Config | YAML (`config/config.yaml`) + `.env` |
