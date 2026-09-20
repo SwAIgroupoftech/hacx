@@ -1,0 +1,66 @@
+{
+  "forecasts": [
+    {
+      "segment_id": "R0001",
+      "horizon_min": 15,
+      "speed_kmh": 12,
+      "confidence": 0.9,
+      "rationale": "Persistence model predicts slight recovery."
+    },
+    {
+      "segment_id": "R0001",
+      "horizon_min": 30,
+      "speed_kmh": 14,
+      "confidence": 0.9,
+      "rationale": "Persistence model predicts slight recovery."
+    },
+    {
+      "segment_id": "R0001",
+      "horizon_min": 45,
+      "speed_kmh": 16,
+      "confidence": 0.9,
+      "rationale": "Persistence model predicts slight recovery."
+    },
+    {
+      "segment_id": "R0001",
+      "horizon_min": 60,
+      "speed_kmh": 18,
+      "confidence": 0.9,
+      "rationale": "Persistence model predicts slight recovery."
+    }
+  ],
+  "incidents": [
+    {
+      "segment_id": "R0001",
+      "incident_class": "blockage_or_crash",
+      "confidence": 0.85,
+      "rationale": "Severe congestion indicates likely blockage."
+    }
+  ],
+  "advisories": [
+    {
+      "title": "Diversion recommended for R0001",
+      "action": "divert",
+      "affected_segments": [
+        "R0001"
+      ],
+      "diversion": [
+        "R0002"
+      ],
+      "expected_saving_min": 4,
+      "confidence": 0.9,
+      "evidence": "Severe congestion on R0001; alternate via R0002 saves ~4 min."
+    }
+  ],
+  "infrastructure": [
+    {
+      "candidate_id": "PLAN0001",
+      "segment_id": "R0001",
+      "intervention": "lane_addition",
+      "estimated_delay_reduction_pct": 50.0,
+      "rationale": "Adding a lane cuts delay from 8 to 4 min (50% reduction)."
+    }
+  ],
+  "summary": "R0001 is severely congested; diversion via R0002 recommended, and lane addition plan can halve delay.",
+  "source": "groq (openai/gpt-oss-120b)"
+}

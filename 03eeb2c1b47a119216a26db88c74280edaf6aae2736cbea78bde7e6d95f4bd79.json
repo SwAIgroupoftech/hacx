@@ -1,0 +1,278 @@
+{
+  "forecasts": [
+    {
+      "segment_id": "R0360",
+      "horizon_min": 15,
+      "speed_kmh": 12.59,
+      "confidence": 0.9,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0360",
+      "horizon_min": 30,
+      "speed_kmh": 12.59,
+      "confidence": 0.9,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0360",
+      "horizon_min": 45,
+      "speed_kmh": 12.59,
+      "confidence": 0.9,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0360",
+      "horizon_min": 60,
+      "speed_kmh": 12.59,
+      "confidence": 0.9,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 15,
+      "speed_kmh": 37.84,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 30,
+      "speed_kmh": 37.84,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 45,
+      "speed_kmh": 37.84,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 60,
+      "speed_kmh": 37.84,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 15,
+      "speed_kmh": 47.16,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 30,
+      "speed_kmh": 47.16,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 45,
+      "speed_kmh": 47.16,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 60,
+      "speed_kmh": 47.16,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0033",
+      "horizon_min": 15,
+      "speed_kmh": 57.15,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0033",
+      "horizon_min": 30,
+      "speed_kmh": 57.15,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0033",
+      "horizon_min": 45,
+      "speed_kmh": 57.15,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0033",
+      "horizon_min": 60,
+      "speed_kmh": 57.15,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0052",
+      "horizon_min": 15,
+      "speed_kmh": 48.65,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0052",
+      "horizon_min": 30,
+      "speed_kmh": 48.65,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0052",
+      "horizon_min": 45,
+      "speed_kmh": 48.65,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0052",
+      "horizon_min": 60,
+      "speed_kmh": 48.65,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0055",
+      "horizon_min": 15,
+      "speed_kmh": 48.24,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0055",
+      "horizon_min": 30,
+      "speed_kmh": 48.24,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0055",
+      "horizon_min": 45,
+      "speed_kmh": 48.24,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0055",
+      "horizon_min": 60,
+      "speed_kmh": 48.24,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0070",
+      "horizon_min": 15,
+      "speed_kmh": 46.8,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0070",
+      "horizon_min": 30,
+      "speed_kmh": 46.8,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0070",
+      "horizon_min": 45,
+      "speed_kmh": 46.8,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0070",
+      "horizon_min": 60,
+      "speed_kmh": 46.8,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0080",
+      "horizon_min": 15,
+      "speed_kmh": 27.87,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0080",
+      "horizon_min": 30,
+      "speed_kmh": 27.87,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0080",
+      "horizon_min": 45,
+      "speed_kmh": 27.87,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    },
+    {
+      "segment_id": "R0080",
+      "horizon_min": 60,
+      "speed_kmh": 27.87,
+      "confidence": 0.85,
+      "rationale": "Persistence forecast based on current speed"
+    }
+  ],
+  "incidents": [
+    {
+      "segment_id": "R0360",
+      "incident_class": "blockage_or_crash",
+      "confidence": 0.9,
+      "rationale": "Lane blockage (severity 2) causing congestion and low speed"
+    }
+  ],
+  "advisories": [
+    {
+      "title": "R0360 Congestion Advisory",
+      "action": "alert",
+      "affected_segments": [
+        "R0360"
+      ],
+      "diversion": [],
+      "expected_saving_min": 0,
+      "confidence": 0.9,
+      "evidence": "Lane blockage leads to severe slowdown; no usable diversion"
+    },
+    {
+      "title": "R0231 Roadworks Advisory",
+      "action": "alert",
+      "affected_segments": [
+        "R0231"
+      ],
+      "diversion": [],
+      "expected_saving_min": 0,
+      "confidence": 0.85,
+      "evidence": "Roadworks cause speed anomaly; diversions not usable"
+    }
+  ],
+  "infrastructure": [
+    {
+      "candidate_id": "PLAN0069",
+      "segment_id": "R0070",
+      "intervention": "signal_retiming",
+      "rationale": "Minor delay reduction (~1.5%) from retiming",
+      "estimated_delay_reduction_pct": 1.46
+    },
+    {
+      "candidate_id": "PLAN0032",
+      "segment_id": "R0033",
+      "intervention": "signal_retiming",
+      "rationale": "Slight delay reduction (~1.0%) from retiming",
+      "estimated_delay_reduction_pct": 0.98
+    }
+  ],
+  "summary": "One active lane blockage at R0360 drives severe congestion; all suggested diversions are unusable. Minor speed anomalies elsewhere persist. Small signal\u2011retiming gains are possible on R0070 and R0033.",
+  "source": "groq (openai/gpt-oss-120b)"
+}

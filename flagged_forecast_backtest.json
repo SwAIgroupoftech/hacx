@@ -1,0 +1,31 @@
+{
+  "n_rows": 384,
+  "n_times": 12,
+  "by_horizon_model": [
+    {
+      "horizon": 15,
+      "model": "gbm",
+      "n": 96,
+      "MAE": 1.165
+    },
+    {
+      "horizon": 30,
+      "model": "gbm",
+      "n": 96,
+      "MAE": 1.109
+    },
+    {
+      "horizon": 45,
+      "model": "gbm",
+      "n": 96,
+      "MAE": 1.354
+    },
+    {
+      "horizon": 60,
+      "model": "gbm",
+      "n": 96,
+      "MAE": 1.317
+    }
+  ],
+  "overall_mae": 1.236
+}

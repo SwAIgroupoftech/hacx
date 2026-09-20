@@ -1,0 +1,260 @@
+{
+  "forecasts": [
+    {
+      "segment_id": "R0384",
+      "horizon_min": 15,
+      "speed_kmh": 15.63,
+      "confidence": 0.95,
+      "rationale": "Persistence chosen due to active incident."
+    },
+    {
+      "segment_id": "R0384",
+      "horizon_min": 30,
+      "speed_kmh": 15.63,
+      "confidence": 0.95,
+      "rationale": "Persistence reflects ongoing blockage."
+    },
+    {
+      "segment_id": "R0384",
+      "horizon_min": 45,
+      "speed_kmh": 15.63,
+      "confidence": 0.95,
+      "rationale": "Persistence reflects ongoing blockage."
+    },
+    {
+      "segment_id": "R0384",
+      "horizon_min": 60,
+      "speed_kmh": 15.63,
+      "confidence": 0.95,
+      "rationale": "Persistence reflects ongoing blockage."
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 15,
+      "speed_kmh": 36.15,
+      "confidence": 0.85,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 30,
+      "speed_kmh": 41.02,
+      "confidence": 0.85,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 45,
+      "speed_kmh": 39.98,
+      "confidence": 0.85,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0231",
+      "horizon_min": 60,
+      "speed_kmh": 43.49,
+      "confidence": 0.85,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0025",
+      "horizon_min": 15,
+      "speed_kmh": 55.16,
+      "confidence": 0.8,
+      "rationale": "GBM slight improvement."
+    },
+    {
+      "segment_id": "R0025",
+      "horizon_min": 30,
+      "speed_kmh": 56.34,
+      "confidence": 0.8,
+      "rationale": "GBM slight improvement."
+    },
+    {
+      "segment_id": "R0025",
+      "horizon_min": 45,
+      "speed_kmh": 57.65,
+      "confidence": 0.8,
+      "rationale": "GBM slight improvement."
+    },
+    {
+      "segment_id": "R0025",
+      "horizon_min": 60,
+      "speed_kmh": 57.97,
+      "confidence": 0.8,
+      "rationale": "GBM slight improvement."
+    },
+    {
+      "segment_id": "R0008",
+      "horizon_min": 15,
+      "speed_kmh": 45.6,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0008",
+      "horizon_min": 30,
+      "speed_kmh": 46.91,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0008",
+      "horizon_min": 45,
+      "speed_kmh": 47.63,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0008",
+      "horizon_min": 60,
+      "speed_kmh": 47.57,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0043",
+      "horizon_min": 15,
+      "speed_kmh": 55.11,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0043",
+      "horizon_min": 30,
+      "speed_kmh": 56.38,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0043",
+      "horizon_min": 45,
+      "speed_kmh": 57.57,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0043",
+      "horizon_min": 60,
+      "speed_kmh": 57.91,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0046",
+      "horizon_min": 15,
+      "speed_kmh": 53.48,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0046",
+      "horizon_min": 30,
+      "speed_kmh": 55.3,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0046",
+      "horizon_min": 45,
+      "speed_kmh": 55.52,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0046",
+      "horizon_min": 60,
+      "speed_kmh": 56.25,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0058",
+      "horizon_min": 15,
+      "speed_kmh": 40.17,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0058",
+      "horizon_min": 30,
+      "speed_kmh": 41.01,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0058",
+      "horizon_min": 45,
+      "speed_kmh": 39.67,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0058",
+      "horizon_min": 60,
+      "speed_kmh": 39.31,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 15,
+      "speed_kmh": 41.61,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 30,
+      "speed_kmh": 42.78,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 45,
+      "speed_kmh": 42.31,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    },
+    {
+      "segment_id": "R0011",
+      "horizon_min": 60,
+      "speed_kmh": 42.4,
+      "confidence": 0.8,
+      "rationale": "GBM improves over persistence."
+    }
+  ],
+  "incidents": [
+    {
+      "segment_id": "R0384",
+      "incident_class": "blockage_or_crash",
+      "confidence": 0.97,
+      "rationale": "Stalled vehicle active, lanes blocked."
+    }
+  ],
+  "advisories": [
+    {
+      "title": "R0384 Blocked \u2013 No viable diversion",
+      "action": "inform",
+      "affected_segments": [
+        "R0384"
+      ],
+      "diversion": [],
+      "expected_saving_min": -9.07,
+      "confidence": 0.6,
+      "evidence": "All alternates marked unusable; expected saving negative."
+    }
+  ],
+  "infrastructure": [
+    {
+      "candidate_id": "PLAN0057",
+      "segment_id": "R0058",
+      "intervention": "lane_addition",
+      "rationale": "Adds capacity, reduces delay by ~0.5\u202fmin (21% reduction).",
+      "estimated_delay_reduction_pct": 21.0
+    }
+  ],
+  "summary": "Active stalled vehicle on R0384 causes severe slowdown; persistence forecasts remain low. No usable diversions; advise drivers to expect delays. Minor speed anomalies elsewhere are mitigated by GBM forecasts. Consider lane addition on R0058 to cut delay.",
+  "source": "llm"
+}

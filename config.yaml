@@ -1,0 +1,158 @@
+# =============================================================================
+# TrafficSense - project configuration
+# =============================================================================
+# Non-secret, tunable settings. Secrets live in .env (see .env.example).
+# All numeric thresholds below are INITIAL DEFAULTS. Tune them against the
+# organizer dataset once it has been inspected. Lines marked TODO depend on
+# the actual data schema.
+# =============================================================================
+
+project:
+  name: "TrafficSense"
+  version: "0.1.0"
+  mode: "advisory_simulated"     # must stay advisory/simulated for judging
+  random_seed: 42
+
+# --- Dataset description (TODO: fill in after inspecting organizer data) ------
+data:
+  traffic_file: "data/raw/traffic_train.csv"        # TODO: real filename
+  network_file: "data/raw/network.csv"        # TODO: real filename (nodes/edges/capacity)
+  incident_file: "data/raw/incidents_train.csv"                              # TODO: set if labelled incidents exist
+  timestamp_column: "timestamp"                    # TODO
+  segment_id_column: "segment_id"                  # TODO
+  speed_column: "speed"                            # TODO
+  flow_column: "flow"                              # TODO (volume/count)
+  occupancy_column: null                           # TODO (optional)
+  time_resolution_minutes: 5                       # TODO: confirm from data
+  timezone: "Asia/Kolkata"                         # TODO: confirm
+
+# --- Cleaning and validation --------------------------------------------------
+validation:
+  max_speed_kmh: 160               # values above this are treated as sensor errors
+  min_speed_kmh: 0
+  max_gap_intervals_to_interpolate: 3
+  flatline_intervals_for_sensor_fault: 12   # identical readings this long => suspect
+
+# --- Replay simulator ("continuously updated view") ---------------------------
+simulation:
+  start_time: null                 # null = first timestamp in data
+  step_minutes: 5                  # one tick = one data interval
+  speed_multiplier: 60             # replay speed in the demo
+  strict_no_lookahead: true        # at time t the system only sees data <= t
+
+# --- Network state layer ------------------------------------------------------
+state:
+  free_flow_speed_percentile: 85   # per-segment free-flow speed estimate
+  rolling_windows_minutes: [15, 30, 60]
+  level_of_service:                # bands on speed ratio = speed / free_flow_speed
+    A: 0.85
+    B: 0.70
+    C: 0.55
+    D: 0.40
+    E: 0.25
+    F: 0.00
+
+# --- Congestion detection -----------------------------------------------------
+congestion:
+  speed_ratio_threshold: 0.50      # below this = congested
+  severe_speed_ratio_threshold: 0.30
+  min_persistence_intervals: 3     # must persist this many ticks to raise a flag
+  spillback_upstream_hops: 3       # how far upstream to look for queue growth
+
+# --- Anomaly detection --------------------------------------------------------
+anomaly:
+  baseline_group_by: ["day_of_week", "hour", "minute_bucket"]   # hour-of-week baseline
+  method: "robust_zscore"          # robust_zscore | stl_residual | isolation_forest
+  robust_z_threshold: 3.5
+  min_baseline_samples: 4
+  recurring_vs_nonrecurring_tolerance: 0.15   # within 15% of baseline = recurring
+
+# --- Incident detection / classification -------------------------------------
+incident:
+  use_supervised_model_if_labels: true
+  classes:
+    - "blockage_or_crash"
+    - "event_surge"
+    - "weather_effect"
+    - "sensor_fault"
+    - "unclassified_anomaly"       # valid output when evidence is weak
+  min_confidence_to_report: 0.55
+  rules:
+    sudden_drop_ratio: 0.40        # speed falls by >=40% within window
+    sudden_drop_window_minutes: 10
+    downstream_flow_drop_ratio: 0.30
+    upstream_queue_growth_intervals: 2
+
+# --- Forecasting --------------------------------------------------------------
+forecast:
+  horizons_minutes: [15, 30, 45, 60]
+  target: "speed"                  # speed | speed_ratio | congestion_state
+  baselines: ["persistence", "historical_average"]
+  models: ["lightgbm"]             # add "gru" only if time allows
+  lag_intervals: [1, 2, 3, 6, 12]
+  use_neighbor_features: true
+  neighbor_hops: 2
+  validation:
+    scheme: "walk_forward"         # time-based only, never random split
+    n_splits: 4
+    test_fraction: 0.2
+  metrics: ["mae", "rmse", "state_f1"]
+  prediction_intervals:
+    enabled: true
+    method: "quantile"             # quantile | conformal
+    quantiles: [0.1, 0.9]
+
+# --- Advisory / diversion engine ---------------------------------------------
+advisory:
+  trigger_min_confidence: 0.6
+  k_alternate_routes: 3
+  min_time_saving_minutes: 3
+  max_alternate_utilisation: 0.85  # do not divert onto routes already near capacity
+  validity_window_minutes: 30
+  required_fields: ["trigger", "evidence", "affected_segments", "action",
+                    "expected_saving_min", "confidence", "valid_until", "label"]
+  label: "ADVISORY ONLY - SIMULATED"
+
+# --- Recurring-bottleneck analysis -------------------------------------------
+bottleneck:
+  ranking_weights:                 # score = weighted mix, or use vehicle_hours_delay directly
+    frequency: 0.3
+    duration: 0.3
+    severity: 0.4
+  min_occurrences_for_recurring: 5
+  top_n: 5
+
+# --- Network modification impact simulation ----------------------------------
+impact:
+  volume_delay_function: "BPR"     # t = t0 * (1 + alpha * (v/c)^beta)
+  bpr_alpha: 0.15
+  bpr_beta: 4.0
+  candidate_interventions:
+    - "add_lane"
+    - "turn_bay"
+    - "signal_retiming"
+    - "bypass_link"
+    - "movement_restriction"
+  sensitivity:
+    demand_change_pct: [-10, 0, 10]
+    capacity_gain_pct: [-25, 0, 25]   # tests how wrong our capacity assumption could be
+  report_as_range: true
+  label: "SIMULATED ESTIMATE - NOT A CONSTRUCTION RECOMMENDATION"
+
+# --- LLM layer ----------------------
+llm:
+  provider: "groq"
+  model: "openai/gpt-oss-120b"
+  role: "forecast_eval_and_advisories"
+  input_format: "structured_json"
+  require_segment_id_citations: true
+  verify_numbers_against_source: true
+  max_evidence_items: 8
+  fallback_to_templates: true
+  reasoning_effort: "low"
+
+# --- Dashboard ----------------------------------------------------------------
+dashboard:
+  refresh_seconds: 2
+  map_center: null                 # TODO: [lat, lon] if geometry exists
+  show_advisory_only_banner: true
